@@ -18,8 +18,15 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Resonance",
   description: "Resonance is a platform for creating and sharing music",
+  manifest: "/manifest.webmanifest",
   icons: {
-    icon: "/resonance-favicon.svg",
+    icon: [
+      {
+        url: "/resonance-favicon.svg",
+        type: "image/svg+xml",
+      },
+    ],
+    shortcut: ["/resonance-favicon.svg"],
   },
 };
 
