@@ -42,3 +42,5 @@ next-env.d.ts
 
 # clerk configuration
 /.clerk/*
+
+/src/generated/prisma
