@@ -1,44 +1,21 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { SidebarTrigger } from "@/components/ui/sidebar";
 import { OrganizationSwitcher, UserButton } from "@clerk/nextjs";
 import { toast } from "sonner";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-[#0a0a0a]">
       <div className="mx-auto flex min-h-screen w-full max-w-7xl flex-col px-6 py-6 md:px-10">
-        {/* Top bar */}
-        <nav className="flex items-center justify-between border-b border-black/10 pb-4">
-          <div className="flex items-center gap-6">
-            <p className="text-sm font-semibold tracking-[0.2em] uppercase">
-              Resonance
-            </p>
-            <span className="hidden text-sm text-black/40 md:inline">
-              Dashboard
-            </span>
+        <div className="flex items-center gap-2">
+          <SidebarTrigger />
+          <div className="flex items-center gap-2">
+            <span className="group-data-[collapsible=icon]:hidden font-semibold text-lg tracking-tighter text-foreground">Resonance</span>
           </div>
-
-          <div className="flex items-center gap-3">
-            <OrganizationSwitcher
-              appearance={{
-                elements: {
-                  organizationSwitcherTrigger:
-                    "h-9 rounded-full border border-black/10 bg-white px-4 text-sm font-medium text-black hover:bg-black/5 transition",
-                },
-              }}
-            />
-            <UserButton
-              appearance={{
-                elements: {
-                  userButtonAvatarBox:
-                    "h-9 w-9 rounded-full ring-1 ring-black/10",
-                },
-              }}
-            />
-          </div>
-        </nav>
-
+        </div>
         {/* Content */}
         <section className="flex flex-1 items-center">
           <div className="grid w-full grid-cols-1 gap-12 py-16 md:grid-cols-[1fr_420px]">
