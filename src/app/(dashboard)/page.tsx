@@ -11,7 +11,7 @@ export default function Home() {
     <main className="min-h-screen bg-white text-[#0a0a0a]">
       <div className="mx-auto flex min-h-screen w-full max-w-7xl flex-col px-6 py-6 md:px-10">
         <div className="flex items-center gap-2">
-          <SidebarTrigger />
+          <SidebarTrigger className="size-7 lg:hidden"/>
           <div className="flex items-center gap-2">
             <span className="group-data-[collapsible=icon]:hidden font-semibold text-lg tracking-tighter text-foreground">Resonance</span>
           </div>
