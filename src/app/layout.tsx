@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Resonance",
-  description: "Resonance is a platform for creating and sharing music",
+  title: {default: "Resonance", template: "%s | Resonance"},
+  description: "AI-powered text to speech and voice cloning platform",
   manifest: "/manifest.webmanifest",
   icons: {
     icon: [
