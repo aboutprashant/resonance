@@ -9,10 +9,9 @@ import { COST_PER_UNIT, TEXT_MAX_LENGTH } from "@/features/text-to-speech/data/c
 
 export function TextInputPanel() {
   const [text, setText] = useState("");
- 
-  return (
-    <div className="flex h-full min-h-0 flex-1 flex-col">
 
+  return (
+    <div className="flex min-h-0 flex-1 flex-col">
       <div className="relative min-h-0 flex-1 ">
         <Textarea
           value={text}
@@ -38,7 +37,7 @@ export function TextInputPanel() {
               <Coins className="size-4 text-chart-5" />
               <span className="text-xs">
                 <span className="tabular-nums">
-                {text.length === 0 ? "Start typing to estimate cost" : `$${(text.length * COST_PER_UNIT).toFixed(4)} estimated`}
+                  {text.length === 0 ? "Start typing to estimate cost" : `$${(text.length * COST_PER_UNIT).toFixed(4)} estimated`}
                 </span>
               </span>
             </Badge>
@@ -55,9 +54,9 @@ export function TextInputPanel() {
           </div>
         ) : (
           <div className="hidden lg:block">
-              <p className="text-sm text-muted-foreground">
-                Get started by typing or pasting your text above
-              </p>
+            <p className="text-sm text-muted-foreground">
+              Get started by typing or pasting your text above
+            </p>
           </div>
         )}
       </div>
